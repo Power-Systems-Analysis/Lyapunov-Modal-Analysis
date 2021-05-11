@@ -1,0 +1,2 @@
+addpath('../fn');
+test();
