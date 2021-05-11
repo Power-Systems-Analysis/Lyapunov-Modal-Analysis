@@ -1,4 +1,4 @@
-# Lyapunov-Modal-Analysis
+# Lyapunov Modal Analysis
 
 ## About
 This repository contains the implementation of the calculation of various Lyapunov Modal Analysis indicators. 
