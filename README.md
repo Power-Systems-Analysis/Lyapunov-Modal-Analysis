@@ -36,14 +36,14 @@ a = [
 ```matlab
 % a_arr - array of dynamic matrices
 % for example
-for k = 1:10
+for i = 1:10
     a = [
-          -1  100     k    0;
+          -1  100     i    0;
         -100   -1     0    0;
            0    0    -2  100;
            0    0  -100   -2;
     ];
-    a_arr(:,:,k) = a;
+    a_arr(:,:,i) = a;
 end
 ```
 
@@ -57,16 +57,44 @@ end
 % a_arr(:,:,i) = u_arr(:,:,i) * diag(e_arr(:,i)) * v_arr(:,:,i)
 ```
 
-### Lyapunov Energy of State
+### Lyapunov Energy of the State
 
 ```matlab
-e = fn_elyap_s(a)
-% e - vector (column) of Lyapunov Energy of each state
-% e(k) - Lyapunov Energy of k-th state
+es = fn_elyap_s(a)
+% es - vector (column) of Lyapunov Energy of each state
+% es(k) - Lyapunov Energy of the k-th state
 ```
 
 ```matlab
 es_arr = fn_elyap_s_arr(a_arr)
 % es_arr - array of vector (column) of Lyapunov Energy of each state
-% es_arr(k, i) - Lyapunov Energy of k-th state of i-th matrix
+% es_arr(k, i) - Lyapunov Energy of the k-th state of the i-th matrix
+```
+
+### Lyapunov Energy of the Mode
+
+```matlab
+em = fn_elyap_m(u, e, v)
+% em - vector (column) of Lyapunov Energy of each mode
+% em(k) - Lyapunov Energy of the k-th mode
+```
+
+```matlab
+em_arr = fn_elyap_m_arr(u_arr, e_arr, v_arr)
+% em - array of vector (column) of Lyapunov Energy of each mode
+% em_arr(k, i) - Lyapunov Energy of the k-th mode of the i-th matrix
+```
+
+### Modal contribution (MC)
+
+```matlab
+emc = fn_elyap_mc(u, e, v)
+% emc - vector (column) of MC of each mode to the Lyapunov energy of states
+% emc(k) - MC of the k-th mode to the Lyapunov energy of states
+```
+
+```matlab
+emc_arr = fn_elyap_mc_arr(u_arr, e_arr, v_arr)
+% emc_arr - array of vector (column) of MC of each mode to the Lyapunov energy of states
+% emc_arr(k, i) - MC of the k-th mode to the Lyapunov energy of states of the i-th matrix
 ```
