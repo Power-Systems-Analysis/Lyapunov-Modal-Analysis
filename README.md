@@ -12,6 +12,11 @@ This repository contains the implementation of the calculation of various Lyapun
 
 ## Usage
 
+```matlab
+% Add path to 'fn'
+addpath('../fn');
+```
+
 ### Notations
 
 ```matlab
