@@ -157,8 +157,8 @@ fn_plot('L2 MC', k_arr, l2_eik_norm_arr, l_arr, 'M%d/S%d', 0);
 
 % Mode in state.
 l_arr = [
-    1 1 2;
-    1 2 2;
+    1 1 3;
+    1 3 3;
 ];
 fn_plot('L2 MC and MI for state 1', k_arr, reshape(l2_eijk_norm_arr(:,:,1,:), [a_size, a_size, k_size]), l_arr, 'M%d/M%d', 0);
 fn_plot('L2 MC and MI for state 3', k_arr, reshape(l2_eijk_norm_arr(:,:,3,:), [a_size, a_size, k_size]), l_arr, 'M%d/M%d', 0);
@@ -174,8 +174,8 @@ for k = 1:k_size
 end
 % Mode in state.
 l_arr = [
-    1 1 2;
-    1 2 2;
+    1 1 3;
+    1 3 3;
 ];
 fn_plot('L2 MC and MI for state 1', k_arr, reshape(l2_eijk_norm_arr_1(:,:,1,:), [a_size, a_size, k_size]), l_arr, 'M%d/M%d', 0);
 
@@ -189,8 +189,8 @@ for k = 1:k_size
 end
 % Mode in state.
 l_arr = [
-    1 1 2;
-    1 2 2;
+    1 1 3;
+    1 3 3;
 ];
 fn_plot('L2 MC and MI for state 3', k_arr, reshape(l2_eijk_norm_arr_2(:,:,3,:), [a_size, a_size, k_size]), l_arr, 'M%d/M%d', 0);
 
