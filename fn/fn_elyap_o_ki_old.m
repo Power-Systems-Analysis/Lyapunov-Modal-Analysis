@@ -1,6 +1,6 @@
 % Lyapunov energy of mode i at node k. 
 % a - dynamic matrix.
-% с - observation matrix.
+% c - observation matrix.
 % eo_ki:
 %    k - row, node
 %    i - column, mode
