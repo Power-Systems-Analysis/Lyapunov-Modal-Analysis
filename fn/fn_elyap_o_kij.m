@@ -1,6 +1,6 @@
 % Energy of modal interaction of modes i and j at node k. 
 % a - dynamic matrix.
-% с - observation matrix.
+% c - observation matrix.
 % eo_kij - energy of modal interaction at node
 %    k - row, node
 function [eo_kij] = fn_elyap_o_kij(u, e, v, c, i, j)

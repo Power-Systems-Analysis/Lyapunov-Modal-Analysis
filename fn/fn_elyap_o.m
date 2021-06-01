@@ -1,6 +1,6 @@
 % Calculation of the Lyapunov energy for observations.
 % a - dynamic matrix.
-% с - observation matrix.
+% c - observation matrix.
 function eo = fn_elyap_o(a, c)
     n = size(c, 1);
     e = zeros(n, n);

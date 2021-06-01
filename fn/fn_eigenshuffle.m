@@ -162,7 +162,8 @@ for i = 1:n
   % initial ordering is purely in decreasing order.
   % If any are complex, the sort is in terms of the
   % real part.
-  [junk,tags] = sort(real(D),1,'descend');
+%   [junk,tags] = sort(real(D),1,'descend');
+  [junk,tags] = sort(imag(D),1,'descend');
   
   Dseq(:,i) = D(tags);
   Vseq(:,:,i) = V(:,tags);
