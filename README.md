@@ -149,7 +149,7 @@ lmie_arr = fn_lmie_arr(u_arr, e_arr, v_arr)
 ```
 
 ```matlab
-% Only L2 MC (only for i-th and i-th mods), light version of fn_l2.
+% Only L2 MC, light version of fn_l2 only for i-th and i-th mods.
 [eik_norm, eik] = fn_l2_mc(u, e, v, c)
 % eik(i,k) - energy of the i-th mode of the k-th observation state.
 % eik_norm(i,k) - normed energy of the i-th mode of the k-th observation state.
