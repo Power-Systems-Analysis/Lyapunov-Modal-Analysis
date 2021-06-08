@@ -143,7 +143,7 @@ lmie_arr = fn_lmie_arr(u_arr, e_arr, v_arr)
 
 ```matlab
 [es, eijk_norm, eijk] = fn_l2(u, e, v, c)
-% es(k) - energy of the k-th state.
+% es(k) - energy of the k-th observation state.
 % eijk(i,j,k) - energy of i-th and j-th mods of the k-th observation state.
 % eijk_norm(i,j,k) - normed energy of i-th and j-th mods of the k-th observation state.
 ```
