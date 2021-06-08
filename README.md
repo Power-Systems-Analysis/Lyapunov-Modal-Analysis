@@ -62,6 +62,15 @@ end
 % a_arr(:,:,k) = u_arr(:,:,k) * diag(e_arr(:,k)) * v_arr(:,:,k)
 ```
 
+```matlab
+% c - observation matrix.
+% for example
+c = [
+      1  0  0  0;
+      0  0  1  0;
+];
+```
+
 ### Lyapunov Energy of the State
 
 ```matlab
@@ -128,4 +137,20 @@ lmie = fn_lmie(u, e, v)
 ```matlab
 lmie_arr = fn_lmie_arr(u_arr, e_arr, v_arr)
 % lmie_arr(i, j, k) - LMIE of the i-th and j-th modes in the system of the k-th matrix
+```
+
+### The L2 modal contribution  (L2 MC) and L2 modal interaction (L2 MI)
+
+```matlab
+[es, eijk_norm, eijk] = fn_l2(u, e, v, c)
+% es(k) - energy of k-th states.
+% eijk(i,j,k) - energy of i-th and j-th mods of the k-th observation state.
+% eijk_norm(i,j,k) - normed energy of i-th and j-th mods of the k-th observation state.
+```
+
+Only L2 MC (only for i-th and i-th mods), light version of fn_l2.
+```matlab
+[eik_norm, eik] = fn_l2_mc(u, e, v, c)
+% eik(i,k) - energy of the i-th mode of the k-th observation state.
+% eik_norm(i,k) - normed energy of the i-th mode of the k-th observation state.
 ```
